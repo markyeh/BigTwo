@@ -1,9 +1,12 @@
 # 相依套件 (Dependencies)
 node_modules/
+/.svelte-kit/
+package/
 
 # 建構輸出 (Build output)
 dist/
 dist-ssr/
+build/
 *.local
 
 # 編輯器與系統檔案 (IDE & OS files)
@@ -20,3 +23,8 @@ dist-ssr/
 # 工具快取 (Logs & Caches)
 npm-debug.log*
 .vite/
+
+# 環境變數 (Environment variables)
+.env
+.env.*
+!.env.example

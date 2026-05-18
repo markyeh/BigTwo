@@ -4,9 +4,6 @@ on:
   push:
     branches: 'main' # 當推送到 main 分支時觸發
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 permissions:
   contents: read
   pages: write
@@ -22,7 +19,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
           cache: 'npm'
 
       - name: Install dependencies
@@ -34,7 +31,7 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/' # Vite 編譯後的輸出目錄
+          path: 'dist' # 如果你的建置輸出是 build/，請將此處改為 'build'
 
   deploy:
     needs: build_site
