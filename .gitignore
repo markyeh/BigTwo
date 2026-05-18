@@ -1,0 +1,22 @@
+# 相依套件 (Dependencies)
+node_modules/
+
+# 建構輸出 (Build output)
+dist/
+dist-ssr/
+*.local
+
+# 編輯器與系統檔案 (IDE & OS files)
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 工具快取 (Logs & Caches)
+npm-debug.log*
+.vite/
